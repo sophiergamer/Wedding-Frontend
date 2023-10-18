@@ -1,3 +1,4 @@
+
 body {background-color: aliceblue;
   overflow-y: scroll;
     scrollbar-color:'white'; 
@@ -6,9 +7,9 @@ body {background-color: aliceblue;
     scrollbar-color:'white'; 
     scroll-behavior: 'smooth'}
 
-#top {text-align: center;
+.top {text-align: center;
   }
-#menu {
+.menu {
 color:black;
 font-size: 17px;
 font-family: 'Futura';
@@ -18,7 +19,7 @@ margin-right: 20px;
 justify-content: space-between;
 display: flex;
 }
-#menu a{
+.menu a{
 color:#262626;
 text-decoration: none;
 }
@@ -26,11 +27,11 @@ text-decoration: none;
 #menu a:hover{
 color:#8FBC8F;
 text-decoration: none;
-
 }
 
-#middle {background-color: #8FBC8F;
+.middle {background-color: #8FBC8F;
     text-align: center;
+    display: inline-flex;
  }
 #bottom {background-color:#f0f8ff;
     text-align: center; }
@@ -53,9 +54,10 @@ text-align: center;
 border-bottom: 1px solid black;
 }
 
-#gallery{
+.gallery{
 padding-top: 20px;
 padding-bottom: 20px;
+display: inline-block
 }
 .card{
 border-radius: 15px;
@@ -63,8 +65,9 @@ text-align: center;
 width: 300px;
 height: 300px;
 display: inline-grid;
-transform-style:preserve-3d;
-transition-duration: 0.6s;
+position: relative;
+transition-duration: 0.6s; 
+
 }
 
 .images{
@@ -77,8 +80,7 @@ border-radius: 15px;
 z-index: 0;
 }
 
-.storyTitle {
-transition-duration: 0.6s;
+#storyTitle {
 position:absolute;
 text-align: center;
 inset: 175px 40px 50px 40px;
@@ -88,36 +90,60 @@ color: aliceblue;
 
 }
 
-.storyContent{
+#storyContent{
 margin-top: 30%;
 margin-left: 10px;
 margin-right: 10px;
 font-family: 'Futura';
 }
 
-.front{
+#front{
 position: absolute;
+top:0;
+left: 0;
 border: 5px, solid white;
 border-radius: 15px;
-backface-visibility: hidden;
+transform-style:preserve-3d;
+
+width: 300px;
+position: relative; 
+backface-visibility: hidden; 
 }
 
-.back{
+#back{
+width: 300px;
+top:0;
+left: 0;
 position: absolute;
 backface-visibility: hidden;
-transform: rotateY(180deg);
 border: 5px, solid white;
 border-radius: 15px;
+transform-style:preserve-3d;
+
+}
+.imageHover{
+  opacity:0.5
+}
+.h2Hover{
+  display:block
 }
 
 .flipped{
 transform: rotateY(180deg)
 }
 
-#messageForm{
+.messageForm{
 font-family: 'baskerville';
 margin-left: 20px;
 line-height: 20px;
+gap: 10px; 
+width: 140px;
+display: inline-block; 
+justify-content: space-evenly;
+position:absolute;
+left:0;
+bottom:0;
+right:0;
 }
 #songForm{
 font-family: 'baskerville';
@@ -151,7 +177,7 @@ input {border: none;
 margin-bottom: 20px;
 }
 
-#mButton{
+.mButton{
 font-family: 'baskerville';
 background-color: transparent;
 border: 1px solid black;

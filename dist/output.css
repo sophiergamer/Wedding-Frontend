@@ -837,6 +837,7 @@ body {
 #middle{
   background-color: #c38d9e;
   padding: 5px;
+  min-height: calc(100vh - 70px);
 }
 
 #menu {
@@ -910,6 +911,7 @@ body {
 }
 
 .bottom{
+  height:50px;
   border-top:1.5px solid white;
   text-align: center;
   color: #e27d60;
@@ -935,6 +937,7 @@ body {
 }
 
 .storyTitle {
+  margin-top: 50px;
   position: relative;
   text-align: center;
   color: white;
@@ -966,6 +969,7 @@ body {
 .songForm{
   color: #e27d60;
   font-family: 'baskerville';
+  padding: 5px;
 }
 
 #sButton{
@@ -985,6 +989,7 @@ body {
   align-items: center;
   padding: 10px;
   border-bottom: 0.5px solid white;
+  border-top:0.5px solid white;
   color: WHITE;
 }
 

@@ -5,8 +5,8 @@ import SongForm from '../SongForm'
 
 export default function SongPage(){
 const [songList, setSongList] = useState(useLoaderData())
-console.log("Start of our problems")
-console.log(songList)
+
+
 const [songForm, setSongForm]= useState({song:"", artist:""})
 const newSong = {song: songForm.song, artist: songForm.artist, likes:0}
 
@@ -19,7 +19,7 @@ function addNewSong(event){
         headers: {"content-type": "application/json"},
         body: JSON.stringify(newSong)
     }).then(response=>response.json())
-    .then(data=>setSongList(...songList, data))
+    .then(data=>setSongList([...songList, data]))
 setSongForm({song:"", artist:""})
     }
 function addLike(id,likes){

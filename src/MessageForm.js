@@ -6,11 +6,12 @@ function resetForm(){
     return(
     <div>
         <form className="messageForm" onSubmit={addMessage}>
-            <label>your name </label>
-            <input type='text' name="name" value={messageForm.name} onChange={handleForm}></input>
-            <label>story or message </label>
-            <input type="text" name="message" onChange={handleForm}/>  
-        <   input className= "mButton" type="submit" value="send it" onClick={resetForm}/>
+            <label className="form-label inline text-base m-2" >your name </label>
+            <input type='text' name="name" value={messageForm.name} onChange={handleForm}
+            className="px-1 py-1"></input>
+            <label className="form-label inline text-base m-2" >story or message </label>
+            <input type="text" name="message" value={messageForm.message} onChange={handleForm} className="px-1 py-1"/>  
+        <   input id= "mButton" type="submit" value="send it" onClick={resetForm}/>
         
         </form>
    </div> )

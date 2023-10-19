@@ -181,15 +181,12 @@ margin-bottom: 20px;
 font-family: 'baskerville';
 background-color: transparent;
 border: 1px solid black;
-display: block;
-margin-left: 47%;
 }
-#sButton{
+.sButton{
 font-family: 'baskerville';
 background-color: transparent;
 border: 1px solid black;
-display: block;
-margin-left: 47%;
+display: inline;
 }
 #link{
 color:#8FBC8F

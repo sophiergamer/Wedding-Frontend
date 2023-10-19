@@ -2,26 +2,22 @@ import {useState} from "react"
 
 export default function PhotoCard({title, story, image})
 {
-const [flipped, setFlipped] = useState(true)
-const [hover, setHover] = useState(true)
-    
+const [flipped, setFlipped] = useState(true)    
 function flip(){setFlipped(!flipped)}
-
-function hovering(){setHover(hover)}
-function leaving(){setHover(!hover)}
 
   
 return( 
     <div onClick={flip}>
     <div >
         {flipped ?  
-            <div id='front' className={hover ? "mouseover" : "mouseleave"} onMouseOver={hovering} onMouseLeave={leaving}>
-                <img className="images" src={image} alt={title}/>
-                <h2 id="storyTitle">{title}</h2>
+            <div id='front'>
+                <img id="images" className="opacity-100 hover:opacity-50" src={image} alt={title}/>
             </div>
         : 
         <div id="back">
+            <h2 className="storyTitle">{title}</h2>
             <p id='storyContent'>{story}</p>
+            
         </div>
         }
         

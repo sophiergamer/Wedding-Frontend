@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 
-body {background-color: aliceblue;
+body {
+  background-color: #85dcb8;
   overflow-y: scroll;
     scrollbar-color:'white'; 
     scroll-behavior: 'smooth'; 
@@ -13,8 +14,12 @@ body {background-color: aliceblue;
 
 .top {text-align: center;
     }
+#middle{
+  background-color: #c38d9e;
+  padding: 5px;
+}
 #menu {
-  color:black;
+  color: #c38d9e;
   font-size: 14px;
   font-family: 'Futura';
   margin-bottom: 5px;
@@ -23,27 +28,172 @@ body {background-color: aliceblue;
   justify-content: space-between;
   display: flex;
   }
+#headText{
+  color:white;
+  font-family: 'futura';
+  font-weight: bold;
+  font-size: large;
+  padding: 5px;
+}
 #pageTitle {margin-top: 10px;
+  color: #e27d60;
     font-family: 'baskerville';
-    font-size: 20px;
+    font-size: xx-large;
     letter-spacing: .1rem;
+    font-weight: bold;
+    
   }
 
-#subTitle { color: #262626;  
+#subTitle { color: #41b383;  
 margin: 0 auto;   
 letter-spacing: .2rem;   
 margin-bottom: 20px;
 font-family: 'baskerville';
 }
-
-
+#messages{
+  color: white;
+  background-color: #41b383;
+  text-align: center;
+  font-family: 'baskerville';
+}
 .messageForm{
   font-family: 'baskerville';
-  margin-left: 20px;
+  margin: 20px;
   line-height: 20px;
   gap: 10px; 
   width: 140px;
-  display: inline-block; 
-
-
+  display: inline;
+  color: white;
+}
+#mButton{
+  font-family: 'baskerville';
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 5px;
+  background-color: #e8a87c;
+  color: white;
   }
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+
+}
+.bottom{
+  border-top:1.5px solid white;
+  text-align: center;
+  color: #e27d60;
+  font-family: 'futura';
+  font-weight: bold;
+  padding: 10px;
+
+}
+.container{
+  position: relative;
+  max-width: 100%;
+}
+#front{
+    width: 320px;
+    }
+#images{
+      object-fit: contain;
+      width: 320px;
+      height: 300px;
+      z-index: 0;
+}
+
+.storyTitle {
+  position: relative; 
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family:'Futura';
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+  display:block
+
+}
+#storyContent{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Futura';
+  text-align: center;
+  color: white;
+  }
+ #back{
+    width: 300px;
+    position: absolute;
+    backface-visibility: hidden;
+ }
+ .songForm{
+  color: #e27d60;
+  font-family: 'baskerville';
+  
+ }
+ #sButton{
+  font-family: 'baskerville';
+  border: 1px solid white;
+  border-radius: 5px;
+  display: inline;
+  padding: 3px;
+  margin: 5px;
+  color: white;
+  background-color: #e8a87c;
+  }
+
+ .playlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 0.5px solid white;
+  color: WHITE;
+}
+
+.song-info {
+  flex: 1;
+  margin-right: 10px;
+  
+}
+
+.song-title {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.artist-name {
+  color: #581845 ;
+}
+
+.likes {
+  font-size: 1em;
+  color:#581845 ;
+}
+#likeButton{
+font-family: 'baskerville';
+border: 1px solid white;
+border-radius: 5px;
+padding: 3px;
+color: white;
+background-color: #e8a87c;
+}
+
+#rsvp{
+  font-family: 'baskerville';
+  padding: 10px;
+  color: white;
+}
+#rsvpButton{
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 3px;
+  color: white;
+  background-color: #e8a87c;
+}

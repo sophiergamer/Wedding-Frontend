@@ -29,11 +29,12 @@ function addMessage(event){
     body: JSON.stringify(newMessage)
   }).then(response=>response.json())
   .then(data=>setMessageList([...messageList, data]))
+  setMessageForm({name:"", message:""})
 }
 
 
   return (
-    <div className="App">
+    <div >
     <Header/>
     <NavBar/>
    <Outlet/>
@@ -44,12 +45,13 @@ function addMessage(event){
                   message={message.message}
           />)}
          </div>
-    <div id="bottom">
+    <div className="bottom">
+    <h2 id="bottomTitle">share a story or send a message</h2>
       <MessageForm messageForm={messageForm}
                   handleForm={handleForm}
                   addMessage={addMessage}
                   setMessageForm={setMessageForm}/>
-      <h2 id="bottomTitle">share a story or send a message</h2>
+      
     </div>
     </div>
   </div>

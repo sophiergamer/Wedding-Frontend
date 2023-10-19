@@ -1,13 +1,15 @@
 
 
-export default function Song({name, artist, likes}){
+export default function Song({name, artist, likes, id, addLike}){
 
     return(
-        <div className="container">
-            <p className="song">{name}</p>
-            <p className='artist'>{artist}</p>
+        <div className="playlist-item">
+        
+            <p className="song-title">{name}</p>
+            <p className='artist-name'>{artist}</p>
             <span className="likes">likes: {likes}</span>
-            <button className="likeButton">I like this song too!</button>
+            <button id="likeButton" onClick={()=>addLike(id,likes)}>I like this song too!</button>
+    
         </div>
     )
 }

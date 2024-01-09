@@ -25,16 +25,21 @@ return(
     <form id='rsvp' onSubmit={sendRSVP} >
         <label className="form-label inline text-base m-2" >Name</label>
         <input type='text' value={form.name} name='name' onChange={handleForm} className="px-1 py-1 rounded-full"></input>
-        <label className="form-label inline  text-base m-2">Response</label>
-        <select name='answer' value={form.answer} onChange={handleForm} className="px-1 py-1 rounded-full">
-            <option>select one</option>
-            <option value='Attending'>Attending</option>
-            <option value='Not'>NOT Attending</option>
-        </select>
-        <label className="form-label inlinetext-base m-2">Email Address</label>
+     
+        <label className="form-label inline text-base m-2">Email Address</label>
         <input type="email" name="email" value={form.email} onChange={handleForm} className="px-1 py-1 rounded-full"></input>
+        <label className="rounded lg bg-orange-400 hover:bg-orange-500">Search</label>
         <input id='rsvpButton' type='submit' ></input>
     </form>
+    <div>
+        //this is where the names will come up for people to click once they have searched, and they can 
+        choose between attending or not attending and THEN they can submit. this will stop random people from 
+        RSVPing 
+        
+        eg. if name in nameList, return name
+        give CHECKBOX/DROPDOWN option for attending or not
+        submit button
+    </div>
  </div>   
  
  )
